@@ -1,0 +1,8 @@
+﻿Build started...
+1>------ Build started: Project: Myproject1, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>C:\Users\HP\source\repos\Myproject1\Myproject1\basic\Class1.cs(12,20,12,21): warning CS0219: The variable 'n' is assigned but its value is never used
+1>Myproject1 -> C:\Users\HP\source\repos\Myproject1\Myproject1\bin\Debug\net7.0\Myproject1.dll
+1>Done building project "Myproject1.csproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Elapsed 00:03.438 ==========
