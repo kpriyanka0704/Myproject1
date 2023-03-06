@@ -109,7 +109,7 @@ namespace Myproject1.Assignments
         }
     }
 
-    class Looptest2
+    class LoopTest2
     {
         static void Main(string[] args)
         {
