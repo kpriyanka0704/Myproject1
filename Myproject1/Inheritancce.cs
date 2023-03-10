@@ -243,7 +243,6 @@ namespace Myproject1
 
         public void  ShowCar() 
         {
-            Console.WriteLine(colour + " " + base.colour);
         }
     }
         
