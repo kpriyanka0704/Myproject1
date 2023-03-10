@@ -224,39 +224,40 @@ namespace Myproject1
         }
     }
 
-     class Vehicle1
-     {
-        public int wheels;
-     }
 
-    class Fourwheeler:Vehicle1
+    class Animal
     {
-        int wheels = 4;
-        public void ShowFourwheeler()
+        public string name;
+        public int legs;
+    }
+    class Dog:Animal
+    {
+        new string name = "Tommy";
+
+        public void ShowName()
         {
-            Console.WriteLine(wheels+" "+base.wheels);
+            Console.WriteLine(name+" "+base.name);
         }
     }
-    class Car: Vehicle1
+    class BabyDog:Animal
     {
-       string colour = "Black";
-
-        public void  ShowCar() 
+        int legs = 4;
+        public void ShowLegs()
         {
+            Console.WriteLine(legs+" "+base.legs);
         }
     }
-        
-    
-    
-    
-    class Basekeywords
+
+
+     class Basekeywords
     {
         static void Main(string[] args)
         {
-            Fourwheeler f= new Fourwheeler();
-            f.ShowFourwheeler();
-            Car c= new Car();
-            c.ShowCar();
+            BabyDog b= new BabyDog();
+            b.ShowLegs();
+            Dog d = new Dog();
+            d.ShowName();
+
         }
     }
 }
