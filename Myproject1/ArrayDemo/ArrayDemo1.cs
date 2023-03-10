@@ -270,13 +270,188 @@ namespace Myproject1.ArrayDemo
         }
     }
 
-    class ArrayDemo10
+    class ArraySortDemo
     {
+        public static void SortArray(int[] a)
+        {
+            Console.WriteLine(string.Join(", ", a));
+            for(int i=0;i<a.Length;i++)
+            {
+                for(int j=i+1;j<a.Length;j++) 
+                {
+                    if (a[i] < a[j])
+                    {
+                        int temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                    }
+                }
+            }
+
+        }
+
+
         static void Main(string[] args)
         {
-           
+            int[] arr = { 'a', 'b', 'Y', 'd', 'u' };
+            ArraySortDemo.SortArray(arr);
+            Console.WriteLine(string.Join(", ", arr));
 
 
+        }
+    }
+
+    class ArrayDemo10//Frequency of each element of integer type of array
+    {
+
+        public static void FindOccurance(int[]a)
+        {
+            for(int i=0;i<a.Length;i++) 
+            {
+                int count = 1;
+                bool isvisited=false;
+                for(int k=i-1;k>=0;k--)
+                {
+                    if (a[k] == a[i])
+                    {
+                        isvisited = true;
+                        break;
+                    }
+                }
+                if(isvisited==false)
+                {
+                    for(int j=i+1;j<a.Length;j++)
+                    {
+                        if (a[i] ==a[j])
+                        {
+                            count++;
+                        }
+                    }
+                    Console.WriteLine(a[i]+" "+count);
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            int[] arr = { 5, 10, 4, 10, 5,3 };
+            ArrayDemo10.FindOccurance(arr);
+        }
+    }
+
+    class ArrayDemo11//frequency of each element in character type of array
+    {
+        public static void FindOccurance(char[] ch)
+        {
+            for (int i = 0; i < ch.Length; i++)
+            {
+                int count = 1;
+                bool isvisited = false;
+                for (int k = i - 1; k >= 0; k--)
+                {
+                    if (ch[k] == ch[i])
+                    {
+                        isvisited = true;
+                        break;
+                    }
+                }
+                if (isvisited == false)
+                {
+                    for (int j = i + 1; j < ch.Length; j++)
+                    {
+                        if (ch[i] == ch[j])
+                        {
+                            count++;
+                        }
+                    }
+                    Console.WriteLine(ch[i] + " " + count);
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            char[] ch = { 'A', 'T', 'H', 'A', 'U', 'T', 'A' };
+            ArrayDemo11.FindOccurance(ch);
+        }
+    }
+    
+
+    class ArrayDemo12//duplicate number from array
+    {
+
+        public static void FindOccurance(int[] a) 
+        {
+            for(int i=0;i<a.Length;i++)
+            {
+                int count = 1;
+                bool isvisited = false;
+                for(int k=i-1;k>=0;k--) 
+                {
+                    if (a[k] == a[i])
+                    { 
+                        isvisited = true;
+                        break;
+                    }
+                }
+                if (isvisited == false) 
+                {
+                    for(int j=i+1;j<a.Length; j++)
+                    {
+                        if (a[i] == a[j]) 
+                        { 
+                            count++;
+                        }
+                    }
+                    if (count > 1)// duplicate number
+                    {
+                        Console.WriteLine(a[i] + " " + count);
+                    }
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            int[] arr = { 2, 4, 6, 4, 6, 8, 9 };
+            ArrayDemo12.FindOccurance(arr);
+        }
+    }
+
+    class ArrayDemo13//Unique element
+    {
+
+        public static void FindOccurance(int[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                int count = 1;
+                bool isvisited = false;
+                for (int k = i - 1; k >= 0; k--)
+                {
+                    if (a[k] == a[i])
+                    {
+                        isvisited = true;
+                        break;
+                    }
+                }
+                if (isvisited == false)
+                {
+                    for (int j = i + 1; j < a.Length; j++)
+                    {
+                        if (a[i] == a[j])
+                        {
+                            count++;
+                        }
+                    }
+                    if (count == 1)//unique element from array
+                    {
+                        Console.WriteLine(a[i] + " " + count);
+                    }
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            int[] arr = { 2, 4, 8, 2, 4, };
+            ArrayDemo13.FindOccurance(arr);
         }
     }
     

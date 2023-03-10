@@ -8,7 +8,51 @@ using System.Threading.Tasks;
 namespace Myproject1.Assignments.Assignment_Inheritance
 {
 
-    class Nib
+    abstract class VisitingTeacher//Override
+    {
+        string Tname;
+       int Tid;
+        int MobileNo;
+
+        public string Name { get => Tname; set => Tname = value; }
+        public int id { get => Tid; set => Tid = value; }
+        public int TMobileNo { get => MobileNo; set => MobileNo = value; }
+
+        public abstract void ShowSalary();
+
+        public override string ToString()
+        {
+            return $"name={Tname} id={id} mobileno={TMobileNo}";
+        }
+    }
+    class HourlyBasedTeacher : VisitingTeacher
+    {
+        int hrs, rate;
+
+        public HourlyBasedTeacher(string name, string id, int mobileno, int hrs, int rate)
+        {
+            this.hrs = hrs;
+            this.rate = rate;
+        }
+
+        public override void ShowSalary()
+        {
+            Console.WriteLine("salary=" + hrs * rate);
+        }
+
+    }
+    class Teacher
+    {
+        static void Main(string[] args)
+        {
+            VisitingTeacher t = new HourlyBasedTeacher("priya","101",1234567890, 25, 2000);
+            t.ShowSalary();
+        }
+    }
+
+
+
+    class Nib//
     {
         public string pmaterialType;
         public int pwidth;
@@ -74,7 +118,7 @@ namespace Myproject1.Assignments.Assignment_Inheritance
         }
     }
 
-    class Inheritance3
+    class Inheritance3//
     {
         class Vehicle
         {
@@ -122,7 +166,7 @@ namespace Myproject1.Assignments.Assignment_Inheritance
     }
 
 
-    class Inheritance7
+    class Inheritance7//
     {
         class Item
         {

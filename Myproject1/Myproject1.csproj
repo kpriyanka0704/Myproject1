@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
-	  <StartupObject>Myproject1.ArrayDemo.ArrayDemo9</StartupObject>
+	  <StartupObject>Myproject1.ArrayDemo.ArrayDemo12</StartupObject>
     <ImplicitUsings>enable</ImplicitUsings>
      <Nullable></Nullable>
   </PropertyGroup>
