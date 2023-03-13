@@ -121,8 +121,8 @@ namespace Myproject1
     class Reactangle
     {
         public int length = 4;
-        public double width = 5;
-        public double height = 6;
+        public int width = 5;
+        public int height = 6;
     }
     class Area : Reactangle
     {

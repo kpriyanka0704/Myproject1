@@ -454,6 +454,121 @@ namespace Myproject1.ArrayDemo
             ArrayDemo13.FindOccurance(arr);
         }
     }
+
+    class ArrayDemo14
+    {
+        static void Main(string[] args)
+        {
+            int[] a = {1,-4,5,6,-9 };
+            Console.WriteLine(string.Join(" ", a));
+            for(int i=0;i<a.Length;i++)
+            {
+                if (a[i] < 0) 
+                { 
+                    if(i<a.Length-1)
+                    {
+                        a[i] = a[i + 1] * a[i + 1];
+                    }
+                    else if (a[i] ==1)
+                    {
+                        a[i] = a[0] * a[0];
+                    }
+                }
+            }
+            Console.WriteLine(string.Join(" ", a));
+        }
+    }
+
+    class ArrayDemo16//Replace
+    {
+        static void Main(string[] args)
+        {
+            char[] c = { 't','E','P','v','a' };
+            Console.WriteLine(string.Join(" ", c));
+            for (int i = 0; i < c.Length; i++)
+            {
+                c[i] = (char)(c[i] + 2);
+                Console.WriteLine(c[i]);
+            }
+            
+        }
+
+
+    }
+
+    
+
+    class ArrayDemo15//MergeArray
+    {
+        static void Main(string[] args)
+        {
+            int i, x, n1, n2, sum;
+
+
+            int[] arr1 = new int[4];
+            int[] arr2 = new int[4];
+            int[] arr3 = new int[8];
+            Console.WriteLine("Enter the first array size");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter element ");
+            for (i = 0; i < n1; i++)
+            {
+                arr1[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter the second array size");
+            n2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the element");
+            for (i = 0; i < n2; i++)
+            {
+                arr2[i] = int.Parse(Console.ReadLine());
+            }
+            for (i = 0; i < n1; i++)
+            {
+                arr3[i] = arr1[i];
+            }
+            sum = n1 + n2;
+            for (i = 0, x = n1; x < sum && i < n2; i++, x++)
+            {
+                arr3[x] = arr2[i];
+            }
+            Console.WriteLine("After merging two arrays");
+            for (i = 0; i < sum; i++)
+            {
+                Console.WriteLine("\t" + arr3[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+
+
+    class ArrayDemo17//MergeArray
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 10, 20, 30, 40 };
+            int[] b = { 50, 60, 70, 80 };
+            int[] c = new int[10];
+
+            for(int i=0; i<a.Length; i++)
+            {
+                c[i] = a[i];
+                Console.WriteLine(c[i]);
+            }
+            for(int i=0;i<b.Length;i++)
+            {
+                c[i] = b[i];
+                Console.WriteLine(b[i]);
+            }
+
+        }
+
+
+    }
+       
+    
+        
+    
+
     
 }
 

@@ -253,4 +253,97 @@ namespace Myproject1.Assignments.Assignment_Inheritance
             }
         }
     }
+
+
+    interface ICake// assignment 4
+    {
+        void Bake();
+    }
+
+    class Strawberry : ICake
+    {
+        public void Bake()
+        {
+            Console.WriteLine("Bake");
+        }
+    }
+    class BlackForest : ICake
+    {
+        public void Bake()
+        {
+            Console.WriteLine("bake");
+        }
+    }
+    class Interface4
+    {
+        static void Main(string[] args)
+        {
+            Strawberry s = new Strawberry();
+            s.Bake();
+            BlackForest b= new BlackForest();
+            b.Bake();
+        }
+    }
+
+
+    interface IIcecream
+    {
+        void eat();
+    }
+    interface IJuice
+    {
+        void drink();
+    }
+    class Mastani:IIcecream
+    {
+        public void eat()
+        {
+            Console.WriteLine("eat");
+        }
+        public void drink()
+        {
+            Console.WriteLine("drink");
+        }
+    }
+
+    class Interface5
+    {
+        static void Main(string[] args)
+        {
+            Mastani m= new Mastani();
+            m.eat();
+            m.drink();
+        }
+    }
+
+    class Volume
+    {
+        public void doublevolume(double r)
+        {
+            double volumeofsphere = 4 / 3 * 22 / 7 * r;
+            Console.WriteLine(4 / 3 * 22 / 7 * r);
+        }
+        public void doublevolume(double h,double r)
+        {
+            double volumeofcylinder = 22 / 7 * r * h;
+            Console.WriteLine(22 / 7 * r * h);
+        }
+        public void doublevolume(double l,double b,double h)
+        {
+            double volumeofcuboid = l * b * h;
+            Console.WriteLine(l * b * h);
+        }
+
+    }
+    class Overloading6
+    {
+        static void Main(string[] args)
+        {
+            Volume v= new Volume();
+            v.doublevolume(10);
+            v.doublevolume(10,20);
+            v.doublevolume(15,20,20);
+        }
+    }
+   
 }

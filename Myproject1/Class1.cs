@@ -31,6 +31,32 @@ namespace Myproject1
             Console.WriteLine("Avg is= " + avg);
         }
     }
+
+
+    class Car
+    {
+        public string colour;
+        public void changeColour(Car c2)
+        {
+            c2.colour = colour;
+            colour = "Red";
+        }
+    }
+
+    class Demo
+    {
+        static void Main(string[] args)
+        {
+            Car c1 = new Car();
+            c1.colour = "Blue";
+            Car c2 = new Car();
+            c2.changeColour(c1);
+            c2.colour = "Pink";
+            Console.WriteLine(c1.colour);
+            Console.WriteLine(c2.colour);
+        }
+    }
+
 }
 
         
